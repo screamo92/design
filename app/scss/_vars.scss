@@ -1,0 +1,24 @@
+$dpurp: #6200EA;
+$purp: #5A00D6; 
+$blue: #5200C4;
+$orange: #FF3D00;
+$lorange: #FF541E;
+$dorange: #F03900;
+$bg:  #212121;
+$htext:#B2B2B2;
+
+@mixin f400 {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+}
+
+@mixin f500 {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+}
+
+@mixin f700 {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 700;
+}
+
