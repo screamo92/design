@@ -189,6 +189,7 @@
             font-size: 0;
             margin-left: 14px;
             outline: none;
+            cursor: pointer;
         }
     }
     .slick-active {
@@ -207,10 +208,7 @@
     padding: 64px 0;
     &__title {
         margin-bottom: 40px;
-        font-size: 32px;
-        line-height: 32px;
         text-align: center;
-        @include f700;
     }
     &__inner {
         display: flex;
@@ -252,3 +250,67 @@
 }
 
 // end free
+// start apps
+.apps {
+    &__inner {
+        display: flex;
+        margin: 77px 0;
+    }
+    &__img {
+        margin-right: 94px;
+    }
+    &__content {
+        padding: 94px 15px 15px;
+        max-width: 418px;
+    }
+    &__title {
+        margin-bottom: 16px;
+    }
+    &__text {
+        line-height: 24px;
+        color: #999;
+        margin-bottom: 16px;
+    }
+    &__link {
+        color: $orange;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 14px;
+        @include f500;
+    }
+}
+// end apps
+
+// start video
+
+.video {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 67px 0;
+    }
+    &__content {
+        max-width: 380px;
+        padding-right: 15px;
+        padding-top: 113px;
+    }
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        line-height: 24px;
+        color: #999;
+        margin-bottom: 16px;
+    }
+    &__link {
+        color: $orange;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 14px;
+        @include f500;
+    }
+    &__movie {
+    }
+}
+// end video
