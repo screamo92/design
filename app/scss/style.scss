@@ -255,9 +255,9 @@
     &__inner {
         display: flex;
         margin: 77px 0;
+        justify-content: space-between;
     }
     &__img {
-        margin-right: 94px;
     }
     &__content {
         padding: 94px 15px 15px;
@@ -314,3 +314,81 @@
     }
 }
 // end video
+
+// start team
+.team {
+    background-color: $purp;
+    &__box {
+        min-height: 485px;
+        text-align: center;
+        padding: 64px 15px 0;
+        margin: 0 auto;
+        max-width: 650px;
+    }
+    &__title {
+        margin-bottom: 24px;
+        color: #fff;
+    }
+    &__text {
+        color: #c4a3f0;
+        line-height: 24px;
+        margin-bottom: 32px;
+    }
+    &__link {
+        color: #fff;
+        background-color: $orange;
+        font-size: 14px;
+        text-align: center;
+        padding: 13px 40px;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+        border-radius: 20px;
+        text-transform: uppercase;
+    }
+}
+// end team
+
+// start object
+
+.object {
+    &__images {
+        text-align: center;
+        margin-top: -165px;
+    }
+}
+// end object
+
+.works {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 64px;
+        padding-top: 15px;
+    }
+    &__item {
+        text-align: center;
+        max-width: 230px;
+        padding: 0 10px;
+        &-title {
+            margin-bottom: 16px;
+        }
+        &-text {
+            color: #999;
+            line-height: 24px;
+            margin-bottom: 56px;
+        }
+    }
+    &__item-images {
+        width: 140px;
+        height: 140px;
+        background-color: $orange;
+        border-radius: 50%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+    }
+}
