@@ -1,6 +1,5 @@
 @import "vars";
 @import "global";
-
 // start header
 .header {
     background-color: transparent;
@@ -8,7 +7,7 @@
     background-color: transparent;
     &__inner {
         position: absolute;
-        z-index: 3;
+        z-index: 4;
         height: 90px;
         max-width: 1366px;
         padding: 0 32px;
@@ -21,7 +20,7 @@
     }
     &__menu {
         li {
-            a {
+            .menu__link {
                 color: $htext;
                 text-transform: uppercase;
                 @include f400;
@@ -34,10 +33,13 @@
                     color: #fff;
                 }
             }
-            & + li {
-                margin-left: 30px;
-            }
         }
+        .menu__item:last-child {
+            margin-right: 15px;
+        }
+    }
+    .menu__item + .menu__item {
+        margin-left: 30px;
     }
 
     &__contacts {
@@ -81,6 +83,50 @@
     }
 }
 
+.menu__btn {
+    width: 30px;
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: 20px;
+    .row__btn {
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        margin-bottom: 4px;
+    }
+}
+.submenu {
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    left: 0;
+    a {
+        &:hover {
+            color: $purp;
+        }
+    }
+
+    &__link {
+        display: block;
+        color: rgba(0, 0, 0, 0.7);
+        padding: 16px 10px 14px 14px;
+        width: 101px;
+    }
+}
+
+.submenu-two {
+    width: 97.23px;
+}
+.menu__item:hover .submenu {
+    display: block;
+}
+
+.menu__item-dropdown--one:hover > .menu__link,
+.menu__item-dropdown--two:hover > .menu__link {
+    color: #fff;
+}
+
 .header__logo-link {
     padding-top: 40px;
 }
@@ -88,10 +134,12 @@
     display: flex;
 }
 
-.menu__link-dropdown {
+.menu__item-dropdown--one,
+.menu__item-dropdown--two {
     padding-right: 29px;
     padding-left: 14px;
     position: relative;
+
     &:hover {
         background-color: rgba(255, 255, 255, 0.3);
         transition: all 0.3s;
@@ -138,10 +186,9 @@
         text-align: center;
         top: 268px;
         position: absolute;
-        min-width: 410px;
+        max-width: 410px;
         left: 50%;
         transform: translateX(-50%);
-        position: absolute;
         z-index: 3;
         padding: 0 15px;
 
@@ -185,6 +232,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
+    text-align: center;
     li {
         display: inline-block;
         button {
@@ -221,6 +269,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__item {
         max-width: 317px;
@@ -298,7 +347,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-        padding: 67px 0;
+        padding: 67px 15px;
     }
     &__content {
         max-width: 380px;
@@ -368,7 +417,11 @@
 .object {
     &__images {
         text-align: center;
-        margin-top: -165px;
+        max-width: 770px;
+        margin: -165px auto 0;
+        img {
+            width: 100%;
+        }
     }
 }
 // end object
@@ -380,6 +433,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__title {
         text-align: center;
@@ -430,6 +484,7 @@
     &__items {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__item {
         margin-bottom: 40px;
@@ -444,7 +499,7 @@
         }
         &-link {
             position: relative;
-            transition: all .3s;
+            transition: all 0.3s;
             &:hover {
                 box-shadow: 0px 0px 7px 2px rgba(193, 157, 227, 1);
             }
@@ -503,6 +558,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__column {
         max-width: 180px;
@@ -538,3 +594,46 @@
 }
 
 // end footer
+.menu ul li {
+    padding: 10px;
+}
+.spisok__item:hover {
+    background-color: #f96;
+}
+.subitem:hover {
+    background-color: #69e;
+}
+.menu ul li,
+.menu ul {
+    display: inline-block;
+}
+.spisok {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #f63;
+}
+.spisok .subspisok {
+    display: none;
+    position: absolute;
+    background-color: #369;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+.menu ul a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu ul ul a {
+    color: #fff;
+    text-decoration: none;
+}
+.spisok__item:hover .subspisok {
+    display: block;
+}
+
+.spisok__item:hover .subitem {
+    display: block;
+}
+
+@import "media";

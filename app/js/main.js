@@ -9,4 +9,17 @@ $(function () {
       autoplay: 3000,
    });
 
+   $('.menu__btn').on('click', function(){
+      $('.menu__list').slideToggle();
+   });
+
+   $('.menu__item-dropdown--one').on('click', function(){
+      $('.submenu-one').slideToggle();
+   });
+
+   $('.menu__item-dropdown--two').on('click', function(){
+      $('.submenu-two').slideToggle();
+   });
+
+   
 });
