@@ -130,7 +130,6 @@
 @media (max-width: 820px) {
    .slider__content {
       max-width: 310px;
-      top: 45%;
       transform: translate(-50%, -50%);
    }
    .video {
@@ -218,6 +217,9 @@
    .slider__button {
       font-size: 12px;
    }
+   .slider__content {
+        top: 40%;
+    }
    .video__movie {
       iframe {
          width: 444px;

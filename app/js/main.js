@@ -6,7 +6,7 @@ $(function () {
       autoplay: true,
       fade: true,
       dots: true,
-      autoplay: 3000,
+      autoplay: 2000,
    });
 
    $('.menu__btn').on('click', function(){
@@ -20,6 +20,8 @@ $(function () {
    $('.menu__item-dropdown--two').on('click', function(){
       $('.submenu-two').slideToggle();
    });
+
+   new WOW().init();
 
    
 });
